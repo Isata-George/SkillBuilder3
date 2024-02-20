@@ -16,7 +16,7 @@ public class Grok {
 
     public Grok()
     {
-
+        powerLevel = DEFAULT_POWER_LEVEL;
     }
 
     /**
@@ -24,7 +24,7 @@ public class Grok {
      */
     public Grok(int powerLevel)
     {
-
+        this.powerLevel = powerLevel;
     }
 
     /*
@@ -52,9 +52,9 @@ public class Grok {
  * of the pill is added to the power level of this Grok.
  */
 
-    public void takePowerPill(int power)
+    public void takePowerPill(PowerPill pill)
     {
-
+        setPowerLevel(powerLevel + pill.getPower());
     }
 /*
  * Invoked when this Grok takes a hit.  The power level of
